@@ -1,0 +1,4 @@
+dist
+build
+py2exe2msi.egg-info
+*.pyc
