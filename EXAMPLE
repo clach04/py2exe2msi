@@ -1,0 +1,36 @@
+from setuptools import setup
+from py2exe2msi import py2exe2msi
+
+PACKAGE_NAME = '<package name>'
+VERSION = '<package version>'
+
+package_metadata = dict(
+	name = PACKAGE_NAME,
+	version = VERSION,
+	description = '<description>',
+	author = '<author>',
+	author_email = '<author description>',
+	long_description = '''<long-description>''',
+	classifiers = [
+		'<classifier>',
+	],
+	license = '<license>'
+)
+
+setup(
+	options = dict(
+		py2exe = dict(
+			compressed = 1,  # create a compressed zip archive
+			optimize = 2,
+			excludes = ['pywin', 'pywin.debugger', 'pywin.debugger.dbgcon', 'pywin.dialogs', 'pywin.dialogs.list']
+		),
+		py2exe2msi = dict(
+			pfiles_dir = '<name of the destination subfolder of Program Files>',
+			upgrade_code = '{<upgrade UUID>}'
+		)
+	),
+	# The lib directory contains everything except the executables and the python dll.
+	# Can include a subdirectory name.
+	zipfile = 'lib/shared.zip',
+	**package_metadata
+)
