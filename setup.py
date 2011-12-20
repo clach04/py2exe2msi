@@ -14,8 +14,8 @@ setup(
 	author_email = 'just.wow@gmail.com',
 	url			= 'http://code.google.com/p/py2exe2msi/',
 	packages	= ['py2exe2msi'],
-	long_description = '''py2exe2msi is an extension to distutils which makes 
-	possible creation of MSI packages for py2exe compiled applications''',
+	long_description = '''py2exe2msi is an extension to distutils which creates 
+	MSI packages for py2exe-compiled applications''',
 	classifiers = [
 		'License :: OSI Approved :: GNU General Public License (GPL)',
 		'Programming Language :: Python',

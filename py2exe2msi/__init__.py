@@ -182,10 +182,10 @@ class py2exe2msi(bdist_msi, object):
 
 		todo = [root_dir]
 
-		def _cab_gen_id(absolute, file):
-			return cab.__class__.gen_id(cab, file)
 		# NOTE: a bit of monkeypatching, a workaround for the bug in
 		# msilib.Directory.start_component when keyfile parameter is present
+		def _cab_gen_id(absolute, file):
+			return cab.__class__.gen_id(cab, file)
 		cab.gen_id = _cab_gen_id
 
 		while todo:
