@@ -1,14 +1,18 @@
-import os, re
+import os, sys
 
-from setuptools import setup
+from distutils.core import setup
+from distutils.errors import DistutilsError
 
 from py2exe2msi import __version__ as VERSION
 
 PACKAGE_NAME='py2exe2msi'
 
+if sys.version_info < (2, 6):
+	raise DistutilsError('this package requires Python 2.6 or later')
+
 setup(
 	name 		= PACKAGE_NAME,
-	version 	= '.'.join(map(str, VERSION)),
+	version 	= VERSION,
 	description	= 'An easy way to create Windows standalone applications in Python',
 	author		= 'Artem Andreev',
 	author_email = 'just.wow@gmail.com',
@@ -25,7 +29,7 @@ setup(
 	],
 	keywords	= 'windows installer msi py2exe executable',
 	license		= 'Proprietary License',
-	install_requires = [
+	requires = [
 		'py2exe', 'msilib'
 	],
 )
