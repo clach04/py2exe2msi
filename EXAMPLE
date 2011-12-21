@@ -1,5 +1,5 @@
 from setuptools import setup
-from py2exe2msi import py2exe2msi
+import py2exe2msi.command
 
 PACKAGE_NAME = '<package name>'
 VERSION = '<package version>'
