@@ -21,14 +21,21 @@ setup(
 	long_description = '''py2exe2msi is an extension to distutils which creates 
 	MSI packages for py2exe-compiled applications''',
 	classifiers = [
-		'License :: OSI Approved :: GNU General Public License (GPL)',
+		'License :: OSI Approved',
+		'License :: OSI Approved :: BSD License',
 		'Programming Language :: Python',
 		'Development Status :: 3 - Alpha',
 		'Intended Audience :: Developers',
+		'Operating System :: Microsoft',
 		'Operating System :: Microsoft :: Windows',
+		'Topic :: Software Development',
+		'Topic :: Software Development :: Build Tools',
+		'Topic :: System',
+		'Topic :: System :: Archiving',
+		'Topic :: System :: Archiving :: Packaging',
+		'Topic :: System :: Software Distribution'
 	],
 	keywords	= 'windows installer msi py2exe executable',
-	license		= 'Proprietary License',
 	requires = [
 		'py2exe', 'msilib'
 	],
