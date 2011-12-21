@@ -37,7 +37,7 @@ setup(
 	],
 	keywords	= 'windows installer msi py2exe executable',
 	requires = [
-		'py2exe', 'msilib'
+		'py2exe (>=0.6.9)'
 	],
 )
 #
